@@ -1,0 +1,375 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Template W3.CSS</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css" />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css?family=Amatic+SC"
+    />
+    <style>
+      body,
+      html {
+        height: 100%;
+      }
+
+      body,
+      h1,
+      h2,
+      h3,
+      h4,
+      h5,
+      h6 {
+        font-family: "Amatic SC", sans-serif;
+      }
+
+      .menu {
+        display: none;
+      }
+
+      .bgimg {
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-image: url("https://www.w3schools.com/w3images/pizza.jpg");
+        min-height: 90%;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Navbar (fixado no topo) -->
+    <div class="w3-top w3-hide-small">
+      <div
+        class="w3-bar w3-xlarge w3-black w3-opacity w3-hover-opacity-off"
+        id="myNavbar"
+      >
+        <a href="#" class="w3-bar-item w3-button">INÍCIO</a>
+        <a href="#menu" class="w3-bar-item w3-button">CARDÁPIO</a>
+        <a href="#about" class="w3-bar-item w3-button">SOBRE</a>
+        <a href="#myMap" class="w3-bar-item w3-button">CONTATO</a>
+      </div>
+    </div>
+
+    <!-- Cabeçalho com imagem -->
+    <header class="bgimg w3-display-container w3-grayscale-min" id="home">
+      <div class="w3-display-bottomleft w3-padding">
+        <span class="w3-tag w3-xlarge">Aberto das 10h às 24h</span>
+      </div>
+      <div class="w3-display-middle w3-center">
+        <span class="w3-text-white w3-hide-small" style="font-size: 100px"
+          >PIZZA <br />California</span
+        >
+        <span
+          class="w3-text-white w3-hide-large w3-hide-medium"
+          style="font-size: 60px"
+          ><b>PIZZA <br />California</b></span
+        >
+        <p>
+          <a href="#menu" class="w3-button w3-xxlarge w3-black"
+            >Veja o cardápio</a
+          >
+        </p>
+      </div>
+    </header>
+
+    <!-- Container do Menu -->
+    <div class="w3-container w3-black w3-padding-64 w3-xxlarge" id="menu">
+      <div class="w3-content">
+        <h1 class="w3-center w3-jumbo" style="margin-bottom: 64px">
+          O CARDÁPIO
+        </h1>
+        <div class="w3-row w3-center w3-border w3-border-dark-grey">
+          <a
+            href="javascript:void(0)"
+            onclick="openMenu(event, 'Pizza');"
+            id="myLink"
+          >
+            <div class="w3-col s4 tablink w3-padding-large w3-hover-red">
+              Pizza
+            </div>
+          </a>
+          <a href="javascript:void(0)" onclick="openMenu(event, 'Pasta');">
+            <div class="w3-col s4 tablink w3-padding-large w3-hover-red">
+              Massas
+            </div>
+          </a>
+          <a href="javascript:void(0)" onclick="openMenu(event, 'Starter');">
+            <div class="w3-col s4 tablink w3-padding-large w3-hover-red">
+              Entradas
+            </div>
+          </a>
+        </div>
+
+        <div id="Pizza" class="w3-container menu w3-padding-32 w3-white">
+          <h1>
+            <b>Margherita</b>
+            <span class="w3-right w3-tag w3-dark-grey w3-round">R$ 12,50</span>
+          </h1>
+          <p class="w3-text-grey">
+            Tomate fresco, mussarela fresca, manjericão fresco
+          </p>
+          <hr />
+
+          <h1>
+            <b>Formaggio</b>
+            <span class="w3-right w3-tag w3-dark-grey w3-round">R$ 15,50</span>
+          </h1>
+          <p class="w3-text-grey">
+            Quatro queijos (mussarela, parmesão, pecorino, jarlsberg)
+          </p>
+          <hr />
+
+          <h1>
+            <b>Frango</b>
+            <span class="w3-right w3-tag w3-dark-grey w3-round">R$ 17,00</span>
+          </h1>
+          <p class="w3-text-grey">Tomate fresco, mussarela, frango, cebolas</p>
+          <hr />
+
+          <h1>
+            <b>Pineapple'o'clock</b>
+            <span class="w3-right w3-tag w3-dark-grey w3-round">R$ 16,50</span>
+          </h1>
+          <p class="w3-text-grey">
+            Tomate fresco, mussarela, abacaxi fresco, bacon, manjericão fresco
+          </p>
+          <hr />
+
+          <h1>
+            <b>Meat Town</b> <span class="w3-tag w3-red w3-round">Picante!</span
+            ><span class="w3-right w3-tag w3-dark-grey w3-round">R$ 20,00</span>
+          </h1>
+          <p class="w3-text-grey">
+            Tomate fresco, mussarela, pepperoni picante, linguiça picante, carne
+            bovina, frango
+          </p>
+          <hr />
+
+          <h1>
+            <b>Parma</b> <span class="w3-tag w3-grey w3-round">Novo</span
+            ><span class="w3-right w3-tag w3-dark-grey w3-round">R$ 21,50</span>
+          </h1>
+          <p class="w3-text-grey">
+            Tomate fresco, mussarela, parma, bacon, rúcula fresca
+          </p>
+        </div>
+
+        <div id="Pasta" class="w3-container menu w3-padding-32 w3-white">
+          <h1>
+            <b>Lasanha</b> <span class="w3-tag w3-grey w3-round">Popular</span>
+            <span class="w3-right w3-tag w3-dark-grey w3-round">R$ 13,50</span>
+          </h1>
+          <p class="w3-text-grey">
+            Molho especial, mussarela, parmesão, carne moída
+          </p>
+          <hr />
+
+          <h1>
+            <b>Ravioli</b>
+            <span class="w3-right w3-tag w3-dark-grey w3-round">R$ 14,50</span>
+          </h1>
+          <p class="w3-text-grey">Ravioli recheado com queijo</p>
+          <hr />
+
+          <h1>
+            <b>Spaghetti Clássico</b>
+            <span class="w3-right w3-tag w3-dark-grey w3-round">R$ 11,00</span>
+          </h1>
+          <p class="w3-text-grey">Tomate fresco, cebolas, carne moída</p>
+          <hr />
+
+          <h1>
+            <b>Massa de Frutos do Mar</b>
+            <span class="w3-right w3-tag w3-dark-grey w3-round">R$ 25,50</span>
+          </h1>
+          <p class="w3-text-grey">Salmão, camarão, lagosta, alho</p>
+        </div>
+
+        <div id="Starter" class="w3-container menu w3-padding-32 w3-white">
+          <h1>
+            <b>Sopa do Dia</b>
+            <span class="w3-tag w3-grey w3-round">Sazonal</span
+            ><span class="w3-right w3-tag w3-dark-grey w3-round">R$ 5,50</span>
+          </h1>
+          <p class="w3-text-grey">Pergunte ao garçom</p>
+          <hr />
+
+          <h1>
+            <b>Bruschetta</b>
+            <span class="w3-right w3-tag w3-dark-grey w3-round">R$ 8,50</span>
+          </h1>
+          <p class="w3-text-grey">Pão com pesto, tomate, cebola, alho</p>
+          <hr />
+
+          <h1>
+            <b>Pão de Alho</b>
+            <span class="w3-right w3-tag w3-dark-grey w3-round">R$ 9,50</span>
+          </h1>
+          <p class="w3-text-grey">
+            Ciabatta grelhado, manteiga de alho, cebolas
+          </p>
+          <hr />
+
+          <h1>
+            <b>Tomozzarella</b>
+            <span class="w3-right w3-tag w3-dark-grey w3-round">R$ 10,50</span>
+          </h1>
+          <p class="w3-text-grey">Tomate e mussarela</p>
+        </div>
+        <br />
+      </div>
+    </div>
+
+    <!-- Container Sobre -->
+    <div
+      class="w3-container w3-padding-64 w3-red w3-grayscale w3-xlarge"
+      id="about"
+    >
+      <div class="w3-content">
+        <h1 class="w3-center w3-jumbo" style="margin-bottom: 64px">Sobre</h1>
+        <p>
+          O Restaurante Pizzaria California foi fundado em Fortaleza pelo Sr.
+          Abraão Levi .
+        </p>
+        <p>
+          <strong>O Chef?</strong> O próprio Sr. Brasileiro<img
+            src="https://www.w3schools.com/w3images/chef.jpg"
+            style="width: 150px"
+            class="w3-circle w3-right"
+            alt="Chef"
+          />
+        </p>
+        <p>Nós estamos orgulhosos de nosso interior.</p>
+        <img
+          src="https://www.w3schools.com/w3images/onepage_restaurant.jpg"
+          style="width: 100%"
+          class="w3-margin-top w3-margin-bottom"
+          alt="Restaurante"
+        />
+        <h1><b>Horário de Funcionamento</b></h1>
+
+        <div class="w3-row">
+          <div class="w3-col s6">
+            <p>Seg & Ter FECHADO</p>
+            <p>Quarta 10:00 - 23:00</p>
+            <p>Quinta 10:00 - 23:00</p>
+          </div>
+          <div class="w3-col s6">
+            <p>Sexta 10:00 - 12:00</p>
+            <p>Sábado 10:00 - 23:00</p>
+            <p>Domingo Fechado</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Imagem de Localização/Mapa -->
+    <img
+      src="https://www.w3schools.com/w3images/map.jpg"
+      class="w3-image w3-greyscale"
+      style="width: 100%"
+      id="myMap"
+    />
+
+    <!-- Contato -->
+    <div
+      class="w3-container w3-padding-64 w3-blue-grey w3-grayscale-min w3-xlarge"
+    >
+      <div class="w3-content">
+        <h1 class="w3-center w3-jumbo" style="margin-bottom: 64px">Contato</h1>
+        <p>
+          Nos encontre em algum endereço em algum lugar ou nos ligue no
+          05050515-122330
+        </p>
+        <p>
+          <span class="w3-tag">FYI!</span> Nós oferecemos serviço de catering
+          completo para qualquer evento, grande ou pequeno. Nós entendemos suas
+          necessidades e vamos atender à comida para satisfazer o maior critério
+          de todos, tanto visualmente quanto em sabor.
+        </p>
+        <p class="w3-xxlarge">
+          <strong>Reserve</strong> uma mesa, pergunte pelo especial do dia ou
+          apenas nos mande uma mensagem:
+        </p>
+        <form action="/action_page.php" target="_blank">
+          <p>
+            <input
+              class="w3-input w3-padding-16 w3-border"
+              type="text"
+              placeholder="Nome"
+              required
+              name="Nome"
+            />
+          </p>
+          <p>
+            <input
+              class="w3-input w3-padding-16 w3-border"
+              type="number"
+              placeholder="Quantas pessoas"
+              required
+              name="Pessoas"
+            />
+          </p>
+          <p>
+            <input
+              class="w3-input w3-padding-16 w3-border"
+              type="datetime-local"
+              placeholder="Data e hora"
+              required
+              name="data"
+              value="2024-04-16T10:00"
+            />
+          </p>
+          <p>
+            <input
+              class="w3-input w3-padding-16 w3-border"
+              type="text"
+              placeholder="Mensagem \ Requisitos especiais"
+              required
+              name="Mensagem"
+            />
+          </p>
+          <p>
+            <button class="w3-button w3-light-grey w3-block" type="submit">
+              ENVIAR MENSAGEM
+            </button>
+          </p>
+        </form>
+      </div>
+    </div>
+
+    <!-- Rodapé. Esta seção contém um anúncio para os Espaços W3Schools. Você pode deixar para nos apoiar. -->
+    <footer class="w3-center w3-black w3-padding-48 w3-xxlarge">
+      <p>
+        Este site foi feito com W3schools Spaces. Faça seu próprio site gratuito
+        hoje!
+      </p>
+      <a
+        class="w3-button w3-round-xxlarge w3-dark-grey w3-margin-bottom"
+        href="https://www.w3schools.com/spaces"
+        target="_blank"
+        >Comece agora</a
+      >
+      <!-- Fim do rodapé. -->
+    </footer>
+
+    <script>
+      // Menu de Abas
+      function openMenu(evt, menuName) {
+        var i, x, tablinks;
+        x = document.getElementsByClassName("menu");
+        for (i = 0; i < x.length; i++) {
+          x[i].style.display = "none";
+        }
+        tablinks = document.getElementsByClassName("tablink");
+        for (i = 0; i < tablinks.length; i++) {
+          tablinks[i].className = tablinks[i].className.replace(" w3-red", "");
+        }
+        document.getElementById(menuName).style.display = "block";
+        evt.currentTarget.firstElementChild.className += " w3-red";
+      }
+      document.getElementById("myLink").click();
+    </script>
+  </body>
+</html>
